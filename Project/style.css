@@ -31,12 +31,13 @@ hr
     width: 100%;
     display: flex;
     align-items: center;
-    background: linear-gradient(lightgray 40%,transparent 100%);
+    background: linear-gradient(black 43%,transparent 100%);
 }
 
 .navbar a{
+    text-shadow: 0px 0px 30px white;
     position: relative;
-    left: 515px;
+    left: 525px;
     padding-left: 0px;
     color: black;
     font-size: 60px;
@@ -53,25 +54,30 @@ hr
     justify-content: space-between;
     color: black;
     position:fixed;
-    
+    transition: o.5s ease-in-out;
 }
 
 .header .icons a,i
 {
+    text-shadow: 0px 0px 10px white;
     text-decoration: none;
+    z-index: 2;
     margin-right: 10px;
     font-size: 25px;
 }
 
 .insta:hover
 {
-    background: linear-gradient(45deg, #833AB4, #FD1D1D, #F56040, #FFDC80);
+    transition: o.5s ease-in-out;
+    background: linear-gradient(45deg, #FD1D1D, #F56040, #FFDC80);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .tweet
 {
+    text-shadow: 0px 0px 10px white;
     color: black;
+    transition: o.5s ease-in-out;
 }
 .tweet:hover
 {
@@ -80,17 +86,18 @@ hr
 
 .nav-drop:hover
 {
-    color:brown;
+    transition: o.5s ease-in-out;
+    color:white;
 }
 
 
 .nav-drop-content
 {
+    text-align:right ;
     padding-top: 10px;
-    padding-left: 20px;
+    padding-left: 0px;
     margin-top: -5px;
     padding-bottom: 5px;
-    padding-right: 8px;
     display: none;
     z-index: 1;
     position: absolute;
@@ -105,23 +112,28 @@ hr
     position: absolute;
 }
 
+.nav-drop-content a
+{
+    color: black;
+}
+
 .nav-drop-content a:hover
 {
     font-weight: 600;
 }
+
 
 /********************************************************Home*******************************************************/
 .Home
 {
     z-index: -1;
     margin-bottom: 100px;
-    padding-top:0px;
     height: 110vh;
     width: 100%;
 }
 .Home video
 {
-    margin-top: -43px;
+    margin-top: 0px;
 }
 .Home .button
 {
@@ -133,17 +145,35 @@ hr
     width: 120px;
     position: absolute;
     margin-top: 650px;
-    margin-left: -800px;
-    background-color: transparent;
-    z-index: 1;
+    margin-left: -810px;
+    background-color:black;
+    z-index: 0;
+    animation-name: Hbutton;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    box-shadow: 0px 0px 15px white;
 }
+
+@keyframes Hbutton {
+    50%
+    {
+        opacity: 20%;
+    }
+    100%
+    {
+        opacity: 100%;
+    }
+}
+
+
 .Home .button a
 {
     font-weight: 600;
-    text-shadow: 0px 0px 3px white;
     color: white;
     text-decoration: none;
 }
+
+
 
 
 /********************************************************About*******************************************************/
@@ -204,7 +234,7 @@ hr
 .services
 {
     margin-top:50px ;
-    height: 100vh;
+    height: 110vh;
 }
 
 .parts h1
@@ -219,9 +249,9 @@ hr
     
     padding-top: 20px;
     display: grid;
-    padding-left: 70px;
+    padding-left: 200px;
     row-gap: 100px;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(2,1fr);
     
 }
@@ -241,7 +271,7 @@ hr
 {
     z-index: -1;
     transform: scale(1.01);
-    box-shadow: 10px 10px 30px black;
+    box-shadow: 0px 0px 30px black;
 }
 
 
@@ -309,6 +339,35 @@ input[type="checkbox"]
     transform: scale(1.3);
 }
 
+#shop-btn
+{
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    font-weight: 300;
+    transition: 0.5s ease-in-out;
+}
+
+#shop-btn:hover
+{
+    color: white;
+    box-shadow: 0px 0px 20px black;
+    transition: 0.1s ease-in-out;
+    transform: scale(1.01);
+    font-weight: 800;
+}
+
+
+.shpbtn
+{
+    width: 100px;
+    box-shadow: 0px 0px 5px black;
+    margin-left: 260px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
 
 
 /***********************************************************************Contact Page***************************************************/
@@ -350,7 +409,7 @@ input[type="checkbox"]
     border: 1px solid black;
     margin-bottom: 20px;
     width: 271px;
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
 }
 .form input:hover
 {
@@ -360,7 +419,7 @@ input[type="checkbox"]
 {
     border: 1px solid black;
     padding-left: 10px;
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
 }
 .form textarea:hover
 {
@@ -376,7 +435,7 @@ input[type="checkbox"]
     margin-top: 80px;
     border-radius: 10px;
     border: 1px solid black;
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
 }
 .form button:hover
 {
@@ -408,7 +467,7 @@ input[type="checkbox"]
     text-decoration: none;
     margin-top: 40px;
     border-radius: 10px;
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
 }
 .form2 a:hover
 {
@@ -448,6 +507,7 @@ input[type="checkbox"]
 
 .footer .name a
 {
+    margin-left: 50px;
     position: absolute;
     margin-top: -50px;
     align-items: center;
