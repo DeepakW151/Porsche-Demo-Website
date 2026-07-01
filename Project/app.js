@@ -23,7 +23,7 @@ function initApp() {
         let newDiv = document.createElement('div');
         newDiv.classList.add('item');
         newDiv.innerHTML = 
-            "<img src=\"image/" + value.image + "\">" +
+            "<img src=\"./assets/image/" + value.image + "\">" +
             "<div class=\"title\" >" + value.name + "</div>" +
             "<div class=\"price\" >" + value.price.toLocaleString() + "<h8> ₹</h8> </div>" +
             "<button onclick=\"addToCard(" + key + ")\">Add To Card</button>";
@@ -69,7 +69,7 @@ function reloadCard() {
             count = count + value.quantity;
             let newli = document.createElement('li');
             newli.innerHTML = 
-                "<div><img src=\"image/" + value.image + "\"/></div>" +
+                "<div><img src=\"./assets/image/" + value.image + "\"/></div>" +
                 "<div>" + value.name + "</div>" +
                 "<div>" + value.price + "</div>" +
                 "<div>" +
